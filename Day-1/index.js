@@ -3,7 +3,7 @@ import { readFile } from "fs/promises";
 let array = [];
 
 async function main() {
-  const data = await readFile("../data.txt", "utf-8");
+  const data = await readFile("./data.txt", "utf-8");
   array = data
     .split("\n")
     .map((line) => line.replace("R", "+").replace("L", "-"))
